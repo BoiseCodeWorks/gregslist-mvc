@@ -19,7 +19,7 @@ function _draw() {
 export default class ValuesController {
   constructor() {
     ProxyState.on("values", _draw);
-    _draw()
+    // _draw()
   }
 
   addValue() {
