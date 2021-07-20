@@ -2,7 +2,8 @@ export default class Car {
   // OBJECT DESCONSCTRUCTION
   // using the {} you can pull only the properties you care about off the incoming object
   // the '=' allows setting default values incase that property was not provided
-  constructor({ make, model, year, price, description, imgUrl }) {
+  constructor({ make, model, year, price, description, imgUrl, id }) {
+    this.id = id
     this.make = make
     this.model = model
     this.year = year
@@ -30,6 +31,8 @@ export default class Car {
               </div>
               <p>${this.description}</p>
               <p><em>$${this.price}</em></p>
+              <button class="btn btn-info btn-block" onclick="app.carsController.bidCar('${this.id}')"> bid </button>
+              <button class="btn btn-warning btn-block" onclick="app.carsController.deleteCar('${this.id}')"> delete </button>
           </div>
       </div>
     </div>
